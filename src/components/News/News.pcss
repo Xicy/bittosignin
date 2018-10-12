@@ -1,0 +1,37 @@
+.bitto-carousel {
+  position: relative;
+  width: calc(var(--gap) * 33);
+  height: calc(var(--gap) * 33.2);
+  overflow: hidden;
+  margin: 0 auto;
+
+  .carousel-row, .first_image {
+    width: calc(var(--gap) * 33);
+    h1 {
+      margin: 0px;
+    }
+    p {
+      margin: 5px 0px;
+    }
+  }
+  .on-right {
+    left: 100%;
+  }
+  .displayed {
+    left: 0;
+  }
+  .on-left {
+    left: -100%;
+  }
+  .ps-move { 
+    -webkit-transition: left 1000ms ease-in-out;
+    -moz-transition: left 1000ms ease-in-out;
+    -o-transition: left 1000ms ease-in-out;
+    -ms-transition: left 1000ms ease-in-out;
+    transition: left 1000ms ease-in-out;
+  }
+}
+
+.carousel-item {
+  position: absolute;  
+}

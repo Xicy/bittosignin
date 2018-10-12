@@ -1,0 +1,59 @@
+.bitto-sidebar-item {
+  align-items: center;
+  border-top: 1px solid var(--header-dropdown-border-color);
+  border-bottom: 1px solid var(--header-dropdown-border-color);
+  box-sizing: border-box;
+  color: var(--screen-subtitle-color);
+  display: flex;
+  font-size: 1.16em;
+  font-weight: normal;
+  margin-bottom: -1px;
+  padding: 16px;
+  text-decoration: none;
+
+  &--header {
+    font-size: 1.6em;
+    padding-top: 85px;
+    padding-bottom: 36px;
+    pointer-events: none;
+  }
+
+  &--sub-route {
+    font-weight: lighter;
+    padding-left: 56px;
+    position: relative;
+
+    &:not(:first-child) {
+      &:before {
+        content: '';
+        position: absolute;
+        width: 56px;
+        height: 1px;
+        left: 0;
+        top: -1px;
+        background: var(--base-bright);
+        z-index: 999;
+      }
+    }
+  }
+
+  &--active {
+    background: var(--sidebar-active-item-color);
+    border-right: 4px solid var(--bitto-brand-color);
+  }
+
+  &--parent {
+    pointer-events: none;
+
+    &.bitto-sidebar-item--active {
+      background: var(--transparent);
+      border-right: none;
+      color: var(--bitto-brand-color);
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    margin-right: 14px;
+  }
+}

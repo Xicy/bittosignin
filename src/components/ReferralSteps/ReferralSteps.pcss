@@ -1,0 +1,21 @@
+.pg-referral-steps {
+  &__arrow {
+    height: calc(var(--gap) * 2.6);
+    margin-top: calc(var(--gap) * 2);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .pg-panel {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.pg-generate-link {
+  height: 100%;
+
+  &__description {
+    margin: 0;
+    font-size: 1.16em;
+    line-height: 1.2em;
+    color: var(--screen-subtitle-color);
+  }
+
+  .cr-button {
+    max-width: calc(var(--gap) * 42.6);
+    margin-top: calc(var(--gap) * 6.6);
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__disabled {
+      background: var(--screen-subtitle-background-disabled);
+      border: 2px solid var(--screen-subtitle-content-disabled);
+      color: var(--screen-subtitle-content-disabled);
+    }
+  }
+}

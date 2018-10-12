@@ -1,0 +1,43 @@
+.pg-referral-steps-item {
+  max-width: calc(var(--gap) * 32);
+  position: relative;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--gap) * 4);
+    }
+  }
+
+  &__description {
+    color: var(--screen-subtitle-color);
+    font-size: 1.16em;
+    line-height: 1.42em;
+    margin: 0;
+    margin-top: calc(var(--gap) * 3);
+  }
+
+  &__icon,
+  &__title {
+    display: inline-block;
+  }
+
+  &__icon {
+    height: calc(var(--gap) * 6.6);
+  }
+
+  &__title {
+    color: var(--bitto-brand-color);
+    font-size: 1.3em;
+    line-height: 1.32em;
+    margin: 0;
+    margin-left: calc(var(--gap) * 2);
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+  }
+}

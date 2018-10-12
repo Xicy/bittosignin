@@ -1,0 +1,61 @@
+.bitto-one-click-trade {
+  padding: calc(var(--gap) * 6) calc(var(--gap) * 5);
+
+  @media (max-width: 768px) {
+    padding: calc(var(--gap) * 4) var(--gap);
+  }
+
+  &__offers {
+    display: flex;
+    flex-wrap: wrap;
+
+    .bitto-one-click-order-option {
+      @media (min-width: 769px) {
+        &:not(:last-child) {
+          margin-right: calc(var(--gap) * 3);
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 48%;
+
+        &:nth-child(odd) {
+          margin-right: calc(var(--gap) * 3);
+        }
+      }
+
+      @media (max-width: 620px) {
+        width: 100%;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &__calculate-price {
+    color: var(--details-content-color);
+    font-size: 1.16em;
+    margin-top: calc(var(--gap) * 11);
+
+    p {
+      margin: 0;
+      margin-bottom: calc(var(--gap) * 3);
+    }
+
+    a {
+      color: var(--bitto-brand-color);
+    }
+  }
+
+  .bitto-one-click-custom-order {
+    margin-top: calc(var(--gap) * 6);
+    max-width: 1090px;
+  }
+
+  .bitto-one-click-order-option {
+    margin-top: calc(var(--gap) * 10);
+  }
+}
+
+.bitto-highlighted {
+  color: var(--bitto-brand-color);
+}

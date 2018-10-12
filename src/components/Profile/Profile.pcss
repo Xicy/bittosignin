@@ -1,0 +1,84 @@
+.pg-profile-page {
+  height: 100%;
+  color: var(--base-8);
+
+  &__box {
+    background-color: var(--profile-box-bg);
+    box-shadow: var(--profile-box-shadow);
+    margin: var(--gap);
+    padding: calc(var(--gap) * 3);
+
+    &-header {
+      border-bottom: 2px solid var(--profile-box-header-line);
+    }
+  }
+
+  #left-col {
+    width: 55%;
+
+    #basic {
+      height: 250px;
+
+      #info-row {
+        display: flex;
+
+        .cr-avatar {
+          margin-right: calc(var(--gap) * 3);
+
+          &__image {
+            border: none;
+            background-color: var(--profile-box-bg);
+            color: var(--profile-accent-color);
+          }
+        }
+
+        #block {
+          display: block;
+        }
+
+        .row {
+          display: flex;
+          width: 100%;
+
+          h3 {
+            font-size: calc(var(--font-size) * 1.5);
+            margin-bottom: calc(var(--gap) / 2);
+            margin-top: var(--gap);
+          }
+
+          p.text-muted {
+            margin-top: 0;
+            padding-right: calc(var(--gap) * 5);
+          }
+        }
+      }
+    }
+
+    #verification {
+      height: 350px;
+    }
+  }
+
+  #right-col {
+    width: 45%;
+
+    #token {
+      height: 400px;
+    }
+
+    #referral-program {
+      height: 200px;
+    }
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  /*#activity {*/
+    /*&::before {*/
+      /*content: "\A";*/
+    /*}*/
+    /*width: 100%;*/
+  /*}*/
+}

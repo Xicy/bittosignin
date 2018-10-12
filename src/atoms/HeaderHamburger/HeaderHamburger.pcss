@@ -1,0 +1,45 @@
+.bitte-ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  user-select: none;
+
+  &--active {
+    transform: rotate(45deg);
+
+    .bitte-ham__line {
+      &--top {
+        stroke-dasharray: 17, 82;
+        stroke-dashoffset: -62px;
+      }
+
+      &--middle {
+        stroke-dashoffset: 23px;
+      }
+
+      &--bottom {
+        stroke-dashoffset: -83px;
+      }
+    }
+  }
+
+  &__line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+
+    &--top {
+      stroke-dasharray: 40, 82;
+    }
+
+    &--middle {
+      stroke-dasharray: 40, 111;
+    }
+
+    &--bottom {
+      stroke-dasharray: 40, 161;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.bitto-home-screen {
+  background: #251da5 url(assets/icons/globe-connects.svg) no-repeat right -50px top 100px;
+  height: 500px;
+  position: relative;
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+  }
+
+  &-intro {
+    margin-left: 105px;
+    padding: 60px 0 !important;
+  }
+
+  &-carousel {
+    display: block;
+    margin: auto;
+    margin-bottom: -30px;
+    margin: 0 auto;
+    width: 1700px;
+
+    &-content {
+      position: relative;
+      overflow: hidden;
+
+      &-items {
+        transition: all 1s ease 0s;
+        width: 10000px;
+        display: flex;
+      }
+
+      img {
+        width: 420px;
+        border-radius: 18px;
+        transition: all 0.2s;
+        transform: scale(0.9);
+        &:hover {
+            transform: scale(1);
+        }
+      }
+    }
+  }
+}

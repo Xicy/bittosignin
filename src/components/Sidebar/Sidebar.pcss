@@ -1,0 +1,19 @@
+.bitto-sidebar {
+  background: var(--base-bright);
+  width: calc(var(--gap) * 41.6);
+  position: absolute;
+  top: 0;
+  float: left;
+  height: 100%;
+  border-right: 1px solid var(--header-dropdown-border-color);
+  transition: left 300ms;
+  z-index: 9999;
+
+  &--open {
+    left: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    left: -500px;
+  }
+}

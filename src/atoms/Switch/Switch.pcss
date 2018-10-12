@@ -1,0 +1,59 @@
+.bitto-switch {
+  display: flex;
+  margin-top: calc(var(--gap) * 4.3);
+
+  &__option {
+    display: block;
+    background: transparent;
+    border: 1px solid var(--bitto-brand-color);
+    box-sizing: border-box;
+    color: var(--footer-copy-color);
+    cursor: pointer;
+    font-size: 1.16em;
+    line-height: 1em;
+    min-width: 130px;
+    padding-top: calc(var(--gap) * 1.5);
+    padding-bottom: calc(var(--gap) * 0.8);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 200ms;
+
+    @media (max-width: 768px) {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    &:first-child {
+      border-bottom-left-radius: var(--switch-border-radius);
+      border-top-left-radius: var(--switch-border-radius);
+    }
+
+    &:last-child {
+      border-bottom-right-radius: var(--switch-border-radius);
+      border-top-right-radius: var(--switch-border-radius);
+    }
+
+    &:not(:first-child) {
+      border-left: 0;
+    }
+
+    &--selected {
+      background: var(--bitto-brand-color);
+      color: var(--base-bright);
+      position: relative;
+
+      &::before {
+        background: var(--bitto-brand-color);
+        border: 3px solid rgba(255, 255, 255, 0.7);
+        content: '';
+        display: block;
+        height: 6px;
+        left: calc(50% - 8px / 2);
+        position: absolute;
+        top: calc(var(--gap) * -3);
+        transform: rotate(45deg);
+        width: 6px;
+      }
+    }
+  }
+}

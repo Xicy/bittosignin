@@ -1,0 +1,17 @@
+.bitto-one-click-trade-options {
+  display: flex;
+  flex-wrap: wrap;
+
+  .bitto-switch {
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: calc(var(--gap) * 5);
+    }
+
+    @media (min-width: 769px) {
+      &:not(:first-child) {
+        margin-left: calc(var(--gap) * 2);
+      }
+    }
+  }
+}

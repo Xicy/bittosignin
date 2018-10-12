@@ -1,0 +1,122 @@
+.bitto-one-click-order-option {
+  color: var(--footer-copy-color);
+  position: relative;
+  width: calc(var(--gap) * 43.3);
+  box-shadow: 0px var(--double-gap) var(--double-gap) calc(var(--gap) * -1) var(--panel-shadow-color);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  &__most-popular {
+    position: absolute;
+    top: calc(var(--gap) * -2.5);
+    left: calc(var(--gap) * -0.7);
+    background: var(--bitto-brand-color);
+    margin: 0;
+    padding: calc(var(--gap) * 2) calc(var(--gap) * 4);
+    color: var(--base-bright);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px var(--double-gap) var(--double-gap) calc(var(--gap) * -1) var(--panel-shadow-color);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      right: -18px;
+      border: 9px solid var(--bitto-brand-color);
+      border-right-color: var(--transparent);
+      border-top-width: 13px;
+      border-bottom-width: 13px;
+
+      @media (max-width: 768px) {
+        border-top-width: 22px;
+        border-bottom-width: 22px;
+        right: -17px;
+      }
+    }
+
+    &::before {
+      top: 0;
+      border-bottom-color: var(--transparent);
+    }
+
+    &::after {
+      top: 28px;
+      border-top-color: var(--transparent);
+    }
+  }
+
+  &--most-popular {
+    .pg-panel {
+      border: 4px solid var(--bitto-brand-color);
+      box-sizing: border-box;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 34px;
+      left: -6px;
+      width: 0;
+      height: 0;
+      border: 3px solid var(--bitto-brand-dark-color);
+      border-left-color: var(--transparent);
+      border-bottom-color: var(--transparent);
+      border-top-width: 10px;
+      border-bottom-width: 11px;
+    }
+  }
+
+  .pg-panel {
+    border-radius: var(--gap);
+    padding-top: calc(var(--gap) * 8);
+  }
+
+  &__title {
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 1.3rem;
+
+    &:first-child {
+      font-weight: bold;
+      margin-bottom: calc(var(--gap) * 2);
+    }
+  }
+
+  &__offer {
+    font-size: 2.3em;
+    font-weight: normal;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--gap) * 2);
+    margin-top: 0;
+    margin-left: -2px;
+  }
+
+  &__price {
+    color: var(--bitto-brand-color);
+    font-size: 2.83em;
+    font-weight: bold;
+    line-height: 2.83rem;
+    margin-top: var(--gap);
+    margin-bottom: 0;
+  }
+
+  .cr-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--gap) * -3.3);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 140px;
+    font-size: 1.16rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,157 @@
+.bitto-sign-up-screen {
+  display: flex;
+  justify-content: center;
+  background: var(--transparent);
+  background: url(assets/icons/auth-background.svg) calc(var(--gap) * -40) center no-repeat;
+  min-height: calc(100vh - calc(var(--gap) * 24.5));
+
+  &__container {
+    background: var(--transparent);
+    margin-top: calc(var(--gap) * 6);
+  }
+
+  &__logo-container {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 128px;
+  }
+
+  &__title {
+    margin-top: calc(var(--gap) * 2);
+    margin-bottom: calc(var(--gap) * 4);
+    color: var(--details-content-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .cr-sign-up-form {
+    background: var(--transparent);
+    margin: 0 auto;
+    padding: 0;
+    max-width: calc(var(--gap) * 60);
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: normal;
+      color: var(--bitto-brand-color);
+      font-size: 2.3rem;
+      background: var(--transparent);
+      margin-bottom: calc(var(--gap) * 3);
+      margin-top: 0 !important;
+    }
+
+    &__button {
+      margin-top: 0;
+      /*margin-top: calc(var(--gap) * 15);*/
+      font-size: calc(var(--gap) * 2);
+    }
+
+    &__label {
+      background: var(--transparent);
+      color: var(--details-title-color);
+      text-transform: uppercase;
+    }
+
+    &__error {
+      color: var(--bitto-brand-color);
+    }
+
+    &__input {
+      input {
+        border-bottom-color: var(--auth-input-border-color);
+        color: var(--details-content-color);
+        font-size: 1.16rem;
+
+        &:focus {
+          border-bottom-color: var(--bitto-brand-color);
+        }
+      }
+    }
+
+    .cr-checkbox {
+      &__label {
+        font-size: 1rem;
+        color: var(--details-content-color);
+        line-height: 1.25rem;
+        padding-bottom: 0;
+      }
+
+      &__checkitem {
+        border-color: var(--bitto-brand-color);
+      }
+    }
+
+    &__checkbox {
+      input {
+        &:checked ~ .cr-checkbox__checkitem {
+          &::after {
+            border-color: var(--bitto-brand-color);
+          }
+        }
+      }
+    }
+
+    &__footer {
+      padding: calc(var(--gap) * 3.3) 0;
+    }
+
+    &__footer-create,
+    &__footer-signin {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    &__footer-create {
+      color: var(--details-content-color);
+    }
+
+    &__footer-signin {
+      color: var(--bitto-brand-color);
+      text-decoration: underline;
+    }
+  }
+
+  .cr-sign-in-form {
+    &__error-message {
+      min-height: 0;
+      height: calc(var(--gap) * 3);
+    }
+
+    &__button-wrapper {
+      min-height: calc(var(--gap) * 5);
+    }
+
+    &__loader {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bitto-sign-up-screen {
+    &__container {
+      width: 100%;
+      margin: 20px 10px 0;
+    }
+
+    .cr-sign-up-form {
+      margin: 0 auto;
+
+      &__button {
+        margin-top: 0;
+        font-size: calc(var(--gap) * 2);
+      }
+
+      &__title {
+        background: var(--transparent);
+        margin-top: calc(var(--gap) * 2);
+      }
+    }
+  }
+}

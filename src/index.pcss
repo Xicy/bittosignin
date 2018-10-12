@@ -1,0 +1,361 @@
+@import "atoms/style.pcss";
+@import "components/style.pcss";
+@import "screens/style.pcss";
+@import "routes/Layout/Layout.pcss";
+@import "fonts.pcss";
+@import "App.pcss";
+
+@import '../node_modules/@openware/components/dark.pcss';
+
+:root {
+  /* typography */
+  --font-size: 12px !important;
+  --font-size-smaller: calc(var(--font-size) * 0.9);
+  --font-size-bigger: calc(var(--font-size) * 1.1);
+  --font-family: Sailec, 'Roboto', 'Helvetica', sans-serif;
+  --font-weight: lighter;
+  --line-height: 1.2;
+
+  /* colors */
+  --base: #c1d4df;
+  --base-1: #c4c4c4;
+  --base-2: #7a96a6;
+  --base-3: #62718b;
+  --base-4: #59aeb9;
+  --base-5: #828282;
+  --base-6: #3f46ad;
+  --base-7: #900d8b;
+  --base-8: #000;
+  --base-bright: #fff;
+  --background: #f3f2f2;
+  --color-red: #b8e9f5;
+  --avatar-border-alt-color: #7a96a6;
+  --avatar-background-alt-color: #2e3642;
+  --avatar-alt-font-color: #7a96a6;
+  --background-dark: #ffffff;
+  --background-wallet-item: #1e2736;
+  --background-wallet-item-active: linear-gradient(to top, #0f1425, #121a29, #161f2d, #1a2530, #1f2a34);
+  --background-dropdown: #1e2736;
+  --button-primary: linear-gradient(#00d0ff, #006cff);
+  --button-hover: linear-gradient(#64d7f1, #3c8af5);
+  --button-active: linear-gradient(#04b2da, #0355d8);
+  --button-disabled: linear-gradient(#0483a4, #0355d8);
+  --button-dark-gray: #ababab;
+  --outline-wallet-item-active: rgba(232, 241, 255, 0.19);
+  --text-light-grey: #c1d4df;
+  --input-block-bg: #1e2736;
+  --input-block-border-color: #62718b;
+  --input-block-color: #7a96a6;
+  --input-block-input-border-color: #62718b;
+  --input-block-input-color: #c1d4df;
+  --order-input-border-color: #62718b;
+  --order-input-crypto-icon-bg: #252e3e;
+  --order-input-crypto-icon-color: #7a96a6;
+  --order-input-input-bg: #1e2736;
+  --order-input-input-color: #c1d4df;
+  --summary-field-border-color: #3591c9;
+  --withdraw-divider-border-color: #62718b;
+  --withdraw-summary-field-message-color: #c1d4df;
+  --withdraw-summary-field-amount-color: #62718b;
+  --withdraw-button-bg: linear-gradient(91.64deg, #3c96cd 0.06%, #2c8ac3 100%);
+  --table-background: #fff;
+  --table-border-bottom: #62718b;
+  --table-header-color: #f3f2f2;
+  --table-dark-header-color: #fff;
+  --title-component-color: #c0c0c0;
+  --table-even-row-background: rgba(122, 150, 166, 0.1);
+  --checkbox-background: #fff;
+  --checkbox-checked-background: #fff;
+  --checkbox-hover-background: #f7f7f7;
+  --checkbox-border-color: #3f46ad;
+  --checkbox-symbol-color: #3f46ad;
+  --transparent: transparent;
+  --sign-in-background-color: linear-gradient(#1f2a34, #0f1425);
+  --sign-in-label-color: #7a96a6;
+  --sign-in-input-color: #c1d4df;
+  --sign-in-input-border-color: #62718b;
+  --sign-up-checkbox-color: #c1d4df;
+  --sign-up-checkbox-mark-color: #a9cde1;
+  --history-action-buy: rgba(184, 233, 245, 0.6);
+  --history-action-sell: #3f46ad;
+  --open-orders-background: #141b2b;
+  --open-orders-head: #1f2a34;
+  --navbar-text-color: #666666;
+  --markets-selected-color: rgba(0, 108, 255, 0.5);
+  --email-header-color: #3f46ad;
+  --dropdown-item-hover-color: #0071c1;
+  --dropdown-bg-color: #52658f;
+  --dropdown-toggle-color: #3f46ad;
+  --order-error-color: crimson;
+  --profile-box-bg: #ffffff;
+  --profile-box-shadow: rgba(0, 0, 0, 0.05);
+  --profile-box-header-line: #EFEFF0;
+  --profile-accent-color: #3f46ad;
+  --text-muted: #C0C0C0;
+  --bitto-brand-color: #006cff;
+  --screen-subtitle-color: #706d6d;
+  --panel-shadow-color: rgba(0, 0, 0, 0.15);
+  --screen-subtitle-background-disabled: #f3f2f2;
+  --screen-subtitle-content-disabled: #706d6d;
+  --double-gap: calc(var(--gap) * 2);
+  --details-title-color: #9a9898;
+  --details-content-color: #706d6d;
+  --header-background: linear-gradient(to right, #251da5, #251da5, #0f0b67);
+  --header-background-alt: linear-gradient(#251da5, #0f0b67);
+  --bitto-brand-dark-color: #0f0b67;
+  --bitto-brand-color-alt: #00ffff;
+  --header-dropdown-border-color: #e3e2e2;
+  --footer-copy-color: #6d6e70;
+  --footer-background-color: #0f0b67;
+  --base-dark: #1f2a34;
+  --scrollbar-thumb-color: #637d91;
+  --scrollbar-track-color: var(--base-dark);
+  --switch-border-radius: calc(var(--gap) * 3);
+  --auth-input-border-color: #B7B5B5;
+  --sidebar-active-item-color: rgba(0, 108, 255, 0.2);
+
+  /* layout */
+  --avatar-alt-height: 30px;
+  --avatar-alt-width: 30px;
+  --avatar-component-width: 50px;
+  --avatar-alt-font-size: 26px;
+  --checkbox-general-intent: 10px;
+  --checkbox-label-font-size: 16px;
+  --checkbox-size: 10px;
+  --checkbox-symbol-size: 10px;
+  --gap: 0.5em;
+}
+
+.cr-title-component {
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.cr-table {
+  background: var(--base-dark);
+  box-shadow: none;
+  overflow-y: scroll;
+
+  &-header__content {
+    height: auto;
+    padding: 12px 12px;
+    padding-bottom: 6px;
+    cursor: move;
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  &-background {
+    top: 60px;
+
+    &__row {
+      padding: 16px;
+    }
+  }
+
+  thead th {
+    position: sticky;
+    top: calc(var(--gap) * 5.5);
+    z-index: 9999;
+    background: var(--base-dark);
+  }
+
+  td {
+    font-weight: normal;
+    line-height: 16px;
+  }
+
+  td,
+  th {
+    padding: 6px 12px !important;
+    font-size: 0.8em !important;
+  }
+
+  td:first-child,
+  th:first-child {
+    text-align: left;
+  }
+
+  td:last-child,
+  th:last-child {
+    text-align: right;
+  }
+}
+
+body, html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--base);
+  background-color: var(--background);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.pg-container {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cr-table {
+  &__head {
+    th {
+      font-size: 1em !important;
+    }
+  }
+
+  &__body {
+    &-row-background {
+      padding: calc(var(--gap) * 2.6);
+    }
+
+    td {
+      background: var(--transparent);
+      font-size: 1em !important;
+      padding-top: calc(var(--gap) * 1.38) !important;
+      padding-bottom: calc(var(--gap) * 1.38) !important;
+    }
+  }
+}
+
+.cr-dropdown {
+  &__list-item {
+    cursor: default;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pg-container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pg-container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pg-container {
+    max-width: 720px;
+  }
+  :root {
+    --font-size: 16px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .pg-container {
+    max-width: 540px;
+  }
+}
+
+// fix weird input[type=button] appearance in mobile browsers
+.cr-button {
+  -webkit-appearance: none;
+}
+
+.cr-grid {
+  &-item {
+    height: 100%;
+
+    &__body {
+      height: 100%;
+      padding: 0;
+      overflow-y: auto;
+    }
+  }
+}
+
+.react-grid-item {
+  background: var(--base-bright);
+  box-shadow: 0px var(--double-gap) var(--double-gap) calc(var(--gap) * -1) var(--panel-shadow-color);
+}
+
+.react-resizable-handle {
+  border: 5px solid var(--grid-resizable-border-color) !important;
+  border-left-color: var(--transparent) !important;
+  border-top-color: var(--transparent) !important;
+  cursor: nwse-resize !important;
+  opacity: 0.5 !important;
+  z-index: 9999;
+
+  &::before {
+    bottom: calc(var(--gap) * 0.1) !important;
+    right: calc(var(--gap) * (-1.2)) !important;
+    width: calc(var(--gap) * 3.4) !important;
+  }
+
+  &::after {
+    right: calc(var(--gap) * (-1.4)) !important;
+    width: calc(var( --gap) * 4.6) !important;
+  }
+}
+
+.cr-copyable-text-field {
+  border: none;
+  padding: 0;
+  position: relative;
+
+  input {
+    font-size: 14px;
+    color: var(--screen-subtitle-color);
+  }
+
+  &__button {
+    color: var(--transparent);
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 17px;
+      top: 0;
+      right: 0;
+      background: url(assets/icons/copy.svg) center center no-repeat;
+    }
+  }
+}
+
+.bitto-app {
+  min-height: calc(100vh - calc(var(--gap) * 14.5));
+
+  @media (max-width: 768px) {
+    min-height: calc(100vh - calc(var(--gap) * 30));
+  }
+}
+
+::-webkit-scrollbar {
+  width: calc(var(--gap) / 2);
+  height: calc(var(--gap) / 2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base-2);
+  border-radius: var(--gap);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--base-1);
+  border-radius: var(--gap);
+}
+
+.cr-button {
+  margin: 0;
+  padding: var(--double-gap) 0;
+  border-radius: calc(var(--gap) * 4);
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}

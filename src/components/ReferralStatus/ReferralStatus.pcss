@@ -1,0 +1,30 @@
+.pg-referral-status {
+  .pg-panel__content {
+    position: relative;
+  }
+
+  .qr-code {
+    margin: 0;
+
+    &__img {
+      height: calc(var(--gap) * 16.6);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .pg-details:last-child {
+    margin-bottom: 0;
+  }
+
+  .SocialMediaShareButton {
+    &:not(:last-child) {
+      margin-right: var(--gap);
+    }
+  }
+
+  .cr-copyable-text-field {
+    max-width: 283px;
+  }
+}

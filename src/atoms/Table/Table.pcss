@@ -1,0 +1,42 @@
+.pg-table {
+  text-align: left;
+  width: 100%;
+
+  th {
+    color: var(--bitto-brand-color);
+    font-size: 1.16em;
+    font-weight: lighter;
+    line-height: 1.16em;
+    padding: calc(var(--gap) * 2.6) 0;
+  }
+
+  td {
+    font-size: 1.16em;
+    line-height: 1.16em;
+    color: var(--details-content-color);
+    padding: calc(var(--gap) * 2) 0;
+    z-index: 1;
+  }
+
+  th,
+  td {
+    padding-left: calc(var(--gap) * 4);
+  }
+
+  &__empty {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.16em;
+    color: var(--details-content-color);
+    margin-top: calc(var(--gap) * 3);
+  }
+
+  &__head {
+    th {
+      background: var(--table-header-color);
+      position: sticky;
+      top: 0;
+    }
+  }
+}

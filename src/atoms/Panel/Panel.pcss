@@ -1,0 +1,32 @@
+.pg-panel {
+  background: var(--base-bright);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: calc(var(--gap) * 6) calc(var(--gap) * 6.6);
+
+  @media (max-width: 767px) {
+    padding: calc(var(--gap) * 4) var(--double-gap);
+  }
+
+  &--no-header {
+    justify-content: center;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  &__title {
+    color: var(--bitto-brand-color);
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  &__title-action {}
+}

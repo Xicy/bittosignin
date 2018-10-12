@@ -1,0 +1,91 @@
+.pg-markets {
+  background-color: var(--transparent);
+  text-align: left;
+  width: 100%;
+
+  &--loading {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cr-table-header {
+    &__content {
+      background: var(--transparent);
+    }
+  }
+
+  .cr-markets {
+    background: var(--transparent);
+
+    .cr-table {
+      background: inherit;
+
+      &__head,
+      tr,
+      th {
+        background: inherit;
+      }
+
+      &__filter {
+        &--active {
+          color: var(--bitto-brand-color);
+        }
+      }
+    }
+  }
+
+  .cr-search {
+    display: flex;
+    position: sticky;
+    padding-bottom: calc(var(--gap) * 2);
+    padding-right: var(--gap);
+    bottom: 0;
+    background: var(--transparent);
+    z-index: 9999;
+
+    &__icon {
+      background: var(--transparent);
+      display: flex;
+      opacity: 0.5;
+      padding-bottom: 0;
+      padding-left: calc(var(--gap) * 2);
+    }
+
+    input {
+      background: inherit;
+    }
+  }
+
+  .cr-table-header__content {
+    padding-top: calc(var(--gap) * 2);
+  }
+}
+
+.cr-table {
+  &__filter {
+    font-size: 1em !important;
+    margin-left: calc(var(--gap) * 2);
+    margin-right: 0;
+    padding: 0 !important;
+  }
+}
+
+.cr-markets {
+  padding-bottom: 0;
+
+  .cr-table {
+    td {
+      cursor: pointer;
+    }
+    &__row {
+      &--selected {
+        td {
+          color: var(--base-bright);
+        }
+      }
+    }
+  }
+}

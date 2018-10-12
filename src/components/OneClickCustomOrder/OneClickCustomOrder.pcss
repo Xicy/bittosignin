@@ -1,0 +1,52 @@
+.bitto-one-click-custom-order {
+  box-shadow: 0px var(--double-gap) var(--double-gap) calc(var(--gap) * -1) var(--panel-shadow-color);
+
+  &__title {
+    color: var(--details-content-color);
+    font-size: 1.16rem;
+    margin: var(--double-gap) 0;
+  }
+
+  .pg-panel {
+    &__content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+
+        .bitto-custom-amount-order-input,
+        .cr-button {
+          margin: var(--double-gap) 0;
+        }
+
+        .bitto-custom-amount-order-input {
+          width: 100%;
+
+          .cr-dropdown {
+            width: 40%;
+          }
+
+          .cr-order-input {
+            width: 60%;
+
+            input {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cr-button {
+    max-width: 140px;
+    font-weight: bold;
+    font-size: 1.16rem;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
