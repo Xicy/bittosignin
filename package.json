@@ -3,8 +3,8 @@
   "version": "1.0.1-beta",
   "private": false,
   "dependencies": {
-    "@openware/components": "^1.0.1-rc.0",
-    "@openware/core-data": "^1.0.1-rc.0",
+    "@openware/components": "^1.0.2",
+    "@openware/core-data": "^1.0.2",
     "axios": "^0.18.0",
     "history": "^4.7.2",
     "react": "^16.4.2",

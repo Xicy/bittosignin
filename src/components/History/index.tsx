@@ -69,16 +69,21 @@ class HistoryContainer extends React.Component<Props> {
         return `${convertedDay} / ${convertedMonth} ${convertedHours}:${convertedMinutes}`;
     }
 
+    private convertTotal(total: number, fractionDigit = 0) {
+        return +Number(total).toFixed(fractionDigit);
+    }
+
     private renderData() {
         const data = this.getHistoryData();
         return (data.length > 0) ? data.map(item => {
-            const { price, created_at, volume, side, executed_volume } = item;
+            const { price, created_at, volume, side } = item;
+            const resultSide = side === 'sell' ? 'ask' : 'bid';
             return [
                 HistoryContainer.getDate(created_at),
-                side,
+                resultSide,
                 price,
                 volume,
-                executed_volume,
+                this.convertTotal(volume * price),
             ];
         }) : [['There is no data to show...']];
     }

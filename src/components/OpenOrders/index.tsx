@@ -97,7 +97,7 @@ class OpenOrdersContainer extends React.Component<Props> {
 
     private handleCancel = (index: number) => {
         const { openOrdersData } = this.props;
-        const orderToDelete = openOrdersData[index];
+        const orderToDelete = this.sortDataByDateTime(openOrdersData)[index];
         this.props.orderCancel(orderToDelete.id);
     };
 }
