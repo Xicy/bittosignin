@@ -79,13 +79,17 @@ class OrderInsert extends React.Component<Props> {
 
     private handleSubmit = (value: OrderProps) => {
         const { type, price, orderType, amount } = value;
-        const order: OrderExecute = {
+        const resultData = {
             market: this.props.currentMarket.id,
             side: type,
             volume: amount.toString(),
-            price: price.toString(),
             ord_type: (orderType as string).toLowerCase(),
         };
+
+        const order = orderType === 'Limit'
+            ? { ...resultData, price: price.toString() }
+            : resultData;
+
         this.props.orderExecute(order);
     }
 
