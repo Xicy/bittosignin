@@ -68,7 +68,7 @@ export class TradingChartComponent extends React.Component<Props> {
 
     public componentWillUnmount() {
         if (this.tvWidget !== null) {
-            this.tvWidget.remove();
+            // this.tvWidget.remove();
             this.tvWidget = null;
         }
     }
