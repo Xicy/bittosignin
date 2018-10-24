@@ -1,4 +1,4 @@
-VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null || echo latest)
+VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null || echo develop)
 SERVICE ?= react-frontend
 IMAGE   := gcr.io/bitto-stage-213505/$(SERVICE):$(VERSION)
 
