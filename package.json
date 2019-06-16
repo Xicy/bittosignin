@@ -3,7 +3,7 @@
   "version": "1.0.1-beta",
   "private": false,
   "dependencies": {
-    "@openware/components": "^1.0.2",
+    "@openware/components": "0.1.10",
     "@openware/core-data": "^1.0.2",
     "axios": "^0.18.0",
     "history": "^4.7.2",
@@ -30,7 +30,7 @@
     "clean": "rimraf build"
   },
   "devDependencies": {
-    "@openware/coding-standards": "^1.0.2-alpha.0",
+    "@openware/coding-standards": "^0.1.6",
     "@types/axios": "^0.14.0",
     "@types/classnames": "^2.2.6",
     "@types/history": "^4.7.0",
